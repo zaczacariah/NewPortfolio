@@ -1,0 +1,40 @@
+.App {
+  position: relative;
+  box-sizing: border-box;
+  display:block;
+  background-color: #F0E6CF;
+  overflow: visible;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  .line {
+    position: absolute;
+    display: block;
+    bottom: -150px;
+    opacity: 0.5;
+    left: calc(100vw/2);
+    width: 2px;
+    height: 500px;
+    background-color: #BEBEBE;
+    z-index: 300;
+    border-radius: 50%;
+
+  }
+
+  .scroll-down {
+    position: absolute;
+    display: block;
+    bottom:200px;
+    left: calc(100vw/2 - 100px);
+    font-family: 'roc-grotesk-condensed';
+    text-transform: uppercase;
+    color: #8d8b8b;
+  }
+}
+
+
+

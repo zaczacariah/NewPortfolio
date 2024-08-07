@@ -1,0 +1,128 @@
+.app-container {
+    position: fixed;
+    display: block;
+    
+    pointer-events: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 500;
+   user-select: none;
+    -webkit-user-select: none;
+
+
+    .scatter{
+        position: fixed;
+        display: block;
+        height:100%;
+        width:100%;
+        background: transparent;
+        align-content: center;
+        background-clip: content-box;
+
+        &:before, &:after {
+            content: "\00a0";
+            user-select: none;
+            -webkit-user-select: none;
+            position: fixed;
+            border: 10px solid transparent;
+            border-image-width: 25px;
+            border-image-outset: 4px 0px 0px 0px;
+            border-image-repeat: round round;
+          }
+
+        &:before {
+ 
+            top: 0;
+            bottom: 0;
+            left: calc(var(--border-thickness) - 5px);
+            right: calc(var(--border-thickness) - 5px);
+            height:120%;
+            border-image-source: url('./scatter-vertical.png');
+            border-image-slice: 35;
+            z-index: 500;
+          }
+          
+        &:after {
+
+            top: calc(var(--border-thickness) - 5px);
+            bottom: calc(var(--border-thickness) - 13px);
+            left: 0;
+            right: 0;
+            border-image-source: url('./scatter.png');
+            border-image-slice: 35;
+            width: 120%;
+            z-index: 500;
+          }
+
+
+    }
+  }
+  
+  .app-container:before, .app-container:after {
+    content: "\00a0";
+    user-select: none;
+    -webkit-user-select: none;
+    position: fixed;
+    border: 10px solid transparent;
+    border-image-width: 8px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round round;
+  }
+  
+  .app-container:before {
+    top: calc(var(--border-thickness) - 2px);
+    bottom: calc(var(--border-thickness) - 2px);
+    left: calc(var(--border-thickness) - 5px);
+    right: calc(var(--border-thickness) - 5px);
+    border-image-source: url('./rough-border-vertical.png');
+    border-image-slice: 10;
+    z-index: 500;
+  }
+  
+  .app-container:after {
+    top: calc(var(--border-thickness) - 5px);
+    bottom: calc(var(--border-thickness) - 5px);
+    left: calc(var(--border-thickness) - 2px);
+    right: calc(var(--border-thickness) - 2px);
+    border-image-source: url('./rough-border.png');
+    border-image-slice: 10;
+    z-index: 500;
+  }
+
+
+  .siteFrame {
+    position: fixed;
+    z-index: 400;
+    background-color: #CF5C4A;
+    background-image: url('./scatter-background.png');
+  }
+
+  .topFrame {
+    top:0;
+    left:0;
+    height: var(--border-thickness);
+    width:100%;
+  }
+
+  .bottomFrame {
+    bottom:0;
+    left:0;
+    height: var(--border-thickness);
+    width:100%;
+  }
+
+  .leftFrame {
+    top:0;
+    left:0;
+    height:100%;
+    width: var(--border-thickness);
+  }
+
+  .rightFrame {
+    top:0;
+    right:0;
+    height:100%;
+    width: var(--border-thickness);
+  }
+
+
