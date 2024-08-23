@@ -1,6 +1,6 @@
 import './Resume.scss'
 import { motion } from 'framer-motion'
-import {images} from '../../assets/index.js';
+import {images} from '@/assets/index.js';
 
 document.documentElement.style.setProperty('--button-border', `url(${images.button_border})`);
 

@@ -1,7 +1,7 @@
 import './Intro.scss'
 import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { useEffect, useState, useRef } from 'react'
-import {images} from '../../assets/index.js';
+import {images} from '@/assets/index.js';
 
 document.documentElement.style.setProperty('--scatter-vertical', `url(${images.scatter_vertical})`);
 document.documentElement.style.setProperty('--scatter', `url(${images.scatter})`);
