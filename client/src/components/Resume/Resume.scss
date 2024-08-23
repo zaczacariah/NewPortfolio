@@ -14,6 +14,7 @@
         flex-direction: column;
         height: 100vh;
         padding:30px;
+        width:calc(100% - 60px);
     }
 
     .resume-content {
@@ -82,7 +83,7 @@
                     width:100%;
                     height: 100%;
                     cursor: pointer;
-                    background-image: url('button-border.png');
+                    background-image: var(--button-border);
                     background-size: 100% 100%;
                     background-repeat: no-repeat;
                 }

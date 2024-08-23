@@ -12,8 +12,9 @@
     @media screen and (max-width: 769px) {
         flex-direction: column;
         height:100%;
-        width:100%;
+        width:calc(100% - 60px);
         padding:30px;
+        padding-top:50px;
     }
     
 
@@ -28,10 +29,10 @@
         position: relative;
 
         @media screen and (max-width: 950px) {
-            width: 50%; 
+            width: 45%; 
         }
         @media screen and (max-width: 769px) {
-            width: 80%; 
+            width: 70%; 
             
             
         }

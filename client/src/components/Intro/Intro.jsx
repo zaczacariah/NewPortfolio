@@ -1,6 +1,13 @@
 import './Intro.scss'
 import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'framer-motion'
 import { useEffect, useState, useRef } from 'react'
+import {images} from '../../assets/index.js';
+
+document.documentElement.style.setProperty('--scatter-vertical', `url(${images.scatter_vertical})`);
+document.documentElement.style.setProperty('--scatter', `url(${images.scatter})`);
+document.documentElement.style.setProperty('--rough-border-vertical', `url(${images.rough_border_vertical})`);
+document.documentElement.style.setProperty('--rough-border', `url(${images.rough_border})`);
+document.documentElement.style.setProperty('--scatter-background', `url(${images.scatter_background})`);
 
 
 const containerVariants = {
@@ -92,19 +99,19 @@ const Intro = () => {
           > 
           <div className='avatar-container'>
             <div className='backdrop' />
-            <img id="eyeholes" src='./avatar_eyeholes_comp.png' alt='avatar' />
-            <img id="eyeless" src='./avatar_eyeless_comp.png' alt='avatar' />
-            <motion.img id="eyeone" src='./avatar_eyeone_comp.png' alt='avatar' ref={eyeOne} style={{transform: useMotionTemplate`translateX(${eyeOneXSpring}px) translateY(${eyeOneYSpring}px) `, transformOrigin: 'center' }} />
-            <motion.img id="eyetwo" src='./avatar_eyetwo_comp.png' alt='avatar' ref={eyeTwo} style={{transform: useMotionTemplate`translateX(${eyeTwoXSpring}px) translateY(${eyeTwoYSpring}px) `, transformOrigin: 'center' }} />
-            <motion.img id="react" src='./avatar_icons/react_new.png' alt='react' style={{transform: useMotionTemplate`translateX(${iconSetXSpring2}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
-            <motion.img id="node" src='./avatar_icons/node_new.png' alt='node' style={{transform: useMotionTemplate`translateX(${iconSetXSpring2}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
-            <motion.img id="html" src='./avatar_icons/html_new.png' alt='html' style={{transform: useMotionTemplate`translateX(${iconSetXSpring}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
-            <motion.img id="css" src='./avatar_icons/css_new.png' alt='css' style={{transform: useMotionTemplate`translateX(${iconSetXSpring}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
-            <motion.img id="jscript" src='./avatar_icons/js_new.png' alt='css' style={{transform: useMotionTemplate`translateX(${iconSetXSpring2}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
-            <motion.img id="mongo" src='./avatar_icons/mongo_new.png' alt='css' style={{transform: useMotionTemplate`translateX(${iconSetXSpring}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
-            <motion.img id="graphql" src='./avatar_icons/graph_new.png' alt='css' style={{transform: useMotionTemplate`translateX(${iconSetXSpring2}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
-            <motion.img id="git" src='./avatar_icons/git_new.png' alt='css' style={{transform: useMotionTemplate`translateX(${iconSetXSpring}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
-            <img id="backdrop" src='./backdrop.png' alt='backdrop' />
+            <img id="eyeholes" src={images.avatar_eyeholes} alt='avatar' />
+            <img id="eyeless" src={images.avatar_eyeless} alt='avatar' />
+            <motion.img id="eyeone" src={images.avatar_eyeone} alt='avatar' ref={eyeOne} style={{transform: useMotionTemplate`translateX(${eyeOneXSpring}px) translateY(${eyeOneYSpring}px) `, transformOrigin: 'center' }} />
+            <motion.img id="eyetwo" src={images.avatar_eyetwo} alt='avatar' ref={eyeTwo} style={{transform: useMotionTemplate`translateX(${eyeTwoXSpring}px) translateY(${eyeTwoYSpring}px) `, transformOrigin: 'center' }} />
+            <motion.img id="react" src={images.avatar_icons.react} alt='react' style={{transform: useMotionTemplate`translateX(${iconSetXSpring2}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
+            <motion.img id="node" src={images.avatar_icons.node} alt='node' style={{transform: useMotionTemplate`translateX(${iconSetXSpring2}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
+            <motion.img id="html" src={images.avatar_icons.html} alt='html' style={{transform: useMotionTemplate`translateX(${iconSetXSpring}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
+            <motion.img id="css" src={images.avatar_icons.css} alt='css' style={{transform: useMotionTemplate`translateX(${iconSetXSpring}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
+            <motion.img id="jscript" src={images.avatar_icons.jscript} alt='css' style={{transform: useMotionTemplate`translateX(${iconSetXSpring2}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
+            <motion.img id="mongo" src={images.avatar_icons.mongo} alt='css' style={{transform: useMotionTemplate`translateX(${iconSetXSpring}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
+            <motion.img id="graphql" src={images.avatar_icons.graphql} alt='css' style={{transform: useMotionTemplate`translateX(${iconSetXSpring2}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
+            <motion.img id="git" src={images.avatar_icons.git} alt='css' style={{transform: useMotionTemplate`translateX(${iconSetXSpring}px) translateX(-55%) translateY(${iconSetYSpring}px) `, transformOrigin: 'center' }} />
+            <img id="backdrop" src={images.backdrop} alt='backdrop' />
             
             
           </div>
@@ -117,21 +124,21 @@ const Intro = () => {
         >
           <motion.h2 variants={childVariants}>Hey, my name is</motion.h2>
           <motion.h1 variants={childVariants}>BEN <span id='lastname'>TAYLOR</span></motion.h1>
-          <motion.p variants={childVariants}>I am an Adelaide based Junior Full-Stack Web Developer.</motion.p>
-          <motion.p variants={childVariants}>Specialising in React, Node, Express & Wordpress</motion.p>
+          <motion.p variants={childVariants}>I am an Sydney based Junior Full-Stack Web Developer.</motion.p>
+          <motion.p variants={childVariants}>Specialising in Next.js, React, Node, Express & Wordpress</motion.p>
           <motion.p id='love' variants={childVariants}>...and yes, I love design.</motion.p>
 
           <motion.div variants={childVariants} className='intro-skills'>
             <div className='row'>
-              <div><img src='./react.png' alt='react' height='35px' width='40px' /> React</div>
-              <div><img src='./node.png' alt='node' height='35px' width='35px' /> Node</div>
-              <div><img src='./wordpress.png' alt='wordpress' height='35px' width='35px' /> Wordpress</div>
-              <div><img src='./mysql.png' alt='mysql' height='35px' width='50px' /> Mysql</div>
+              <div><img src={images.gen_react} alt='react' height='35px' width='40px' /> React</div>
+              <div><img src={images.gen_node} alt='node' height='35px' width='35px' /> Node</div>
+              <div><img src={images.gen_wordpress} alt='wordpress' height='35px' width='35px' /> Wordpress</div>
+              <div><img src={images.gen_mysql} alt='mysql' height='35px' width='50px' /> Mysql</div>
             </div>
             <div className='row'>
-              <div><img src='./graphql.png' alt='graphql' height='35px' width='35px' />Graphql</div>
-              <div><img src='./heroku.png' alt='heroku' height='40px' width='35px' />Heroku</div>
-              <div><img src='./mongo.png' alt='mongodb' height='35px' width='18px' />Mongodb</div>
+              <div><img src={images.gen_graphql} alt='graphql' height='35px' width='35px' />Graphql</div>
+              <div><img src={images.gen_heroku} alt='heroku' height='40px' width='35px' />Heroku</div>
+              <div><img src={images.gen_mongo} alt='mongodb' height='35px' width='18px' />Mongodb</div>
             </div>
           
           </motion.div>

@@ -38,29 +38,36 @@ const Contact = () => {
             let contX = contBounds.left;
             let contY = contBounds.top;
             setContAnchor({ x: contX, y: contY });
+            console.log("Positin of top: ", contY)
           }
-          
+
     }, [viewportSize])
 
 
+ 
+
     const radialX = useTransform(mouseX, x => (x - contAnchor.x));
-    const radialY = useTransform(mouseY, y => (y - contAnchor.y));
+    const radialY = useTransform(mouseY, y => {
+        console.log("Y: " + y);
+        console.log("contAnchor.x: " + contAnchor.y);
+        return y - contAnchor.y
+    });
     const springX = useSpring(radialX, { damping: 25, mass: 0.5, stiffness: 150})
     const springY = useSpring(radialY, { damping: 25, mass: 0.5, stiffness: 150})
-
+    radialY.on('change', (x) => console.log(x));
 
   return (
     <div className='app-contact'    onMouseMove={(e) => {
         mouseX.set(e.pageX);
         mouseY.set(e.pageY);
-    }}>
+    }}  ref={cont}>
         <div className='contact-card' 
               
   
             >
             <motion.div className="card-overlay" 
              
-                    ref={cont}
+                   
                 style={{ background: useMotionTemplate`radial-gradient(400px circle at ${springX}px ${springY}px, rgb(102 98 97), rgb(128, 114, 112))` }}
                 />
             <div className="card-header">

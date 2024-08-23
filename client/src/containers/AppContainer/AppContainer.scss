@@ -37,7 +37,7 @@
             left: calc(var(--border-thickness) - 5px);
             right: calc(var(--border-thickness) - 5px);
             height:120%;
-            border-image-source: url('./scatter-vertical.png');
+            border-image-source: var(--scatter-vertical);
             border-image-slice: 35;
             z-index: 500;
           }
@@ -48,7 +48,7 @@
             bottom: calc(var(--border-thickness) - 13px);
             left: 0;
             right: 0;
-            border-image-source: url('./scatter.png');
+            border-image-source: var(--scatter);
             border-image-slice: 35;
             width: 120%;
             z-index: 500;
@@ -74,7 +74,7 @@
     bottom: calc(var(--border-thickness) - 2px);
     left: calc(var(--border-thickness) - 5px);
     right: calc(var(--border-thickness) - 5px);
-    border-image-source: url('./rough-border-vertical.png');
+    border-image-source: var(--rough-border-vertical);
     border-image-slice: 10;
     z-index: 500;
   }
@@ -84,7 +84,7 @@
     bottom: calc(var(--border-thickness) - 5px);
     left: calc(var(--border-thickness) - 2px);
     right: calc(var(--border-thickness) - 2px);
-    border-image-source: url('./rough-border.png');
+    border-image-source: var(--rough-border);
     border-image-slice: 10;
     z-index: 500;
   }
@@ -94,7 +94,7 @@
     position: fixed;
     z-index: 400;
     background-color: #CF5C4A;
-    background-image: url('./scatter-background.png');
+    background-image: var(--scatter-background);
   }
 
   .topFrame {
