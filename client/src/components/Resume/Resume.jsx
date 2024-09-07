@@ -34,7 +34,7 @@ return (
                             
                             <h1>Resume</h1>
                             <p>I'd love to work with you!</p>
-                            <p> I am actively seeking opportunities within large or enterprise-level businesses to further sharpen my skills and contribute to impactful projects. While I am eager to contribute to dynamic, large-scale environments, I am also actively seeking opportunities in smaller businesses, where I bring valuable experience from working in versatile roles across the stack and in product development. 
+                            <p>I am actively seeking opportunities within large or enterprise-level businesses to further sharpen my skills and contribute to impactful projects. While I am eager to contribute to dynamic, large-scale environments, I am also actively seeking opportunities in smaller businesses, where I bring valuable experience from working in versatile roles across the stack and in product development. 
                             </p>
                             <a href='./ben_taylor_cv.docx' download='./ben_taylor_cv.docx'>
                                     <div className='resume-button'><h1>Download</h1></div>

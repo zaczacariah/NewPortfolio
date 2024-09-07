@@ -124,7 +124,7 @@ const Intro = () => {
         >
           <motion.h2 variants={childVariants}>Hey, my name is</motion.h2>
           <motion.h1 variants={childVariants}>BEN <span id='lastname'>TAYLOR</span></motion.h1>
-          <motion.p variants={childVariants}>I am an Sydney based Junior Full-Stack Web Developer.</motion.p>
+          <motion.p variants={childVariants}>I am a Sydney based Junior Full-Stack Web Developer.</motion.p>
           <motion.p variants={childVariants}>Specialising in Next.js, React, Node, Express & Wordpress</motion.p>
           <motion.p id='love' variants={childVariants}>...and yes, I love design.</motion.p>
 
